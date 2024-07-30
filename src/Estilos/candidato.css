@@ -23,8 +23,11 @@
     justify-content: space-around;
 
     && h3{
-        font-size:13px
-    }
+        font-size:35px;
+        mix-blend-mode: difference;
+        color: yellow;
+        z-index: 50;
+    }   
 }
 
 
@@ -45,6 +48,8 @@
 
 .contenedor-barraporcentual{
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     width: 75%;
     height: 50px;
@@ -54,8 +59,12 @@
 }
 
 .barraporcentual{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     position: absolute;
+    left: 0;
 }                             
 
 .lalibertadavanza{

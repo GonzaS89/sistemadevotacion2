@@ -52,6 +52,7 @@ const Candidato = (props) => {
           <img className="imagen-partido " src={props.imagen} alt="" />
         </button>
         <div className="contenedor-barraporcentual">
+            <h3>{definirPorcentaje(props.nombre)}%</h3>
           <span
             className={
               props.nombre === "javier milei"
@@ -61,7 +62,7 @@ const Candidato = (props) => {
             style={{ width: `${definirCandidato(props.nombre)}%`}}
           ></span>
         </div>
-        <h3>{definirPorcentaje(props.nombre)}%</h3>
+        
         
       </div>
       <h3>Votos: {props.nombre === 'javier milei' ? votosMilei : votosMassa}</h3>
