@@ -36,10 +36,10 @@ function App() {
           
           <span className='contador-caja'>Total de votantes : <motion.div className='contador-contenedor'
           key={totalVotos}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50 , scale : 0}}
+          animate={{ opacity: 1, y: 0 , scale : 1 }}
           exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.5 }}>{totalVotos}</motion.div> electores</span>
+          transition={{ duration: .25 }}>{totalVotos}</motion.div> {totalVotos > 1 || totalVotos == 0  ? 'Electores' : 'Elector'}</span>
     </div>
   );
 }
