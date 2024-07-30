@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import Candidato from './Componentes/candidato';
 import candidatos from "./candidatos.json";
 
@@ -32,7 +33,13 @@ function App() {
           enviarId = {recibirId}/>
         ))}
       </div>
-          <h1>Total de votantes : {totalVotos} electores</h1>
+          
+          <span className='contador-caja'>Total de votantes : <motion.div className='contador-contenedor'
+          key={totalVotos}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.5 }}>{totalVotos}</motion.div> electores</span>
     </div>
   );
 }

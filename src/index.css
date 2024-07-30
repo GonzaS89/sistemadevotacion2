@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.contador-container {
+  font-size: 3rem;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  position: relative;
+  height: 4em; /* Asegúrate de que la altura sea suficiente para mostrar el efecto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.contador-caja{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 30px;
+}

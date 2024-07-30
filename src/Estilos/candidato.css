@@ -65,7 +65,10 @@
     height: 100%;
     position: absolute;
     left: 0;
-}                             
+    animation: aa 1s forwards;
+}                            
+
+
 
 .lalibertadavanza{
     background-color: purple;
@@ -80,4 +83,12 @@
 
 .porcentaje {
     font-weight: bold;
+}
+
+.votosporpartido{
+    font-size: 15px;
+
+    && span {
+        text-transform: capitalize;
+    }
 }

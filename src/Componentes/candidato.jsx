@@ -1,11 +1,15 @@
 import { React, useState, useEffect } from "react";
+import { motion } from 'framer-motion';
 import "../Estilos/candidato.css";
+import { Transition } from "react-transition-group";
 
 const Candidato = (props) => {
 
   const [votos, setVotos] = useState(0);
   const [votosMilei , setVotosMilei] = useState(0);
   const [votosMassa , setVotosMassa] = useState(0);
+
+  const [animacionActiva, setAnimacionActiva] = useState(false);
 
   const validarId = () => {
     props.nombre === 'javier milei' ? 
@@ -17,7 +21,7 @@ const Candidato = (props) => {
     setVotos(votos + 1);
   };
 
-  const [porcentaje, setPorcentaje] = useState(0);
+  let porcentaje;
 
   const sumarYEnviar = () => {
     return (
@@ -36,13 +40,18 @@ const Candidato = (props) => {
     )
   }
 
+
   const definirPorcentaje = (candidato) => {
     return (
-        candidato === 'javier milei' ? 
-        ((votosMilei / props.totalVotos) * 100).toFixed(2) :
-        ((votosMassa / props.totalVotos) * 100).toFixed(2)
+         candidato === 'javier milei' ? 
+        (votosMilei / props.totalVotos) * 100:
+        (votosMassa / props.totalVotos) * 100
     )
+    
   }
+
+  porcentaje = props.totalVotos === 0 ?
+    0 : definirPorcentaje(props.nombre)
 
   return (
     <div className="contenedor-candidato">
@@ -52,20 +61,23 @@ const Candidato = (props) => {
           <img className="imagen-partido " src={props.imagen} alt="" />
         </button>
         <div className="contenedor-barraporcentual">
-            <h3>{definirPorcentaje(props.nombre)}%</h3>
-          <span
+            <h3>{porcentaje === undefined ? 'vacio' : porcentaje.toFixed(2)}%</h3>
+          <motion.div     
             className={
               props.nombre === "javier milei"
                 ? "barraporcentual lalibertadavanza"
                 : "barraporcentual unionporlapatria"
             }
             style={{ width: `${definirCandidato(props.nombre)}%`}}
-          ></span>
+            initial = {{width : '0%'}}
+            transition={{duration : .25 , ease : "backInOut"}}
+            animate = {{width : `${porcentaje}%`}}
+          ></motion.div>
         </div>
         
         
       </div>
-      <h3>Votos: {props.nombre === 'javier milei' ? votosMilei : votosMassa}</h3>
+      <h3 className="votosporpartido">Votos por <span>{props.nombre}</span>: {props.nombre === 'javier milei' ? votosMilei : votosMassa}</h3>
     </div>
   );
 };
