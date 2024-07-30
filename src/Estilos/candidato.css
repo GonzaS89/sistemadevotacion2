@@ -1,0 +1,74 @@
+.contenedor-candidato{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background-color: #FCF8F3;
+    border: 2px solid grey;
+    padding-left: 15px;
+    border-radius: 15px;
+}
+
+.nombre-candidato{
+    text-transform: uppercase;
+    font-size: 12.5px;
+    width: 100%;
+    text-align: left;
+}
+
+
+.contenedor-partido{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    && h3{
+        font-size:13px
+    }
+}
+
+
+.contenedor-imagen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgba(128, 128, 128, 0.355);
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+
+}
+.imagen-partido{
+    width: 50px;
+}
+
+.contenedor-barraporcentual{
+    display: flex;
+    background-color: white;
+    width: 75%;
+    height: 50px;
+    position: relative;
+    border: 1px solid rgba(128, 128, 128, 0.555);
+    overflow: hidden;
+}
+
+.barraporcentual{
+    height: 100%;
+    position: absolute;
+}                             
+
+.lalibertadavanza{
+    background-color: purple;
+}
+
+.unionporlapatria{
+    background-color: #36C2CE;
+    /* position: absolute;
+    right:0 */
+
+}
+
+.porcentaje {
+    font-weight: bold;
+}
