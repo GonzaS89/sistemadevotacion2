@@ -1,7 +1,7 @@
 .contenedor-candidato{
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 80%;
     background-color: #FCF8F3;
     border: 2px solid grey;
     padding-left: 15px;

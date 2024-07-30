@@ -7,27 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* code {
+code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-} */
-
-.contador-container {
-  overflow: hidden;
-  position: relative;
-  height: 2px; /* Asegúrate de que la altura sea suficiente para mostrar el efecto */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
 }
 
-.contador-caja{
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  font-size: 30px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-transform: uppercase;
-  margin-top: 25px;
-}
