@@ -2,6 +2,7 @@
   text-align: center;
   height: 100vh;
   background-color: #EEEEEE;
+  padding: 25px;
 }
 
 .titulo-app{
@@ -14,6 +15,7 @@
   justify-content: center;
   align-items: center;
   gap: 15px;
+  margin-top: 50px;
 }
 
 h1,h2,h3{
@@ -43,9 +45,6 @@ h1,h2,h3{
   text-align: center;
 }
 
-@media (min-width : 360px) {
-  .contador-caja {
-    flex-direction: column;
-  }
-}
+
+
 

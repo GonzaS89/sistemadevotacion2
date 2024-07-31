@@ -1,26 +1,54 @@
 .contenedor-candidato{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 80%;
-    background-color: #FCF8F3;
-    border: 2px solid grey;
-    padding-left: 15px;
+    /* padding-left: 15px; */
     border-radius: 15px;
+    height: 150px;
+}
+
+.ascenso{
+    flex-direction: column-reverse;
+    transition: all 2s;
+}
+
+@keyframes descender {
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+@keyframes ascender {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-110%);
+    }
 }
 
 .nombre-candidato{
     text-transform: uppercase;
-    font-size: 12.5px;
-    width: 100%;
+    font-size: 20px;
     text-align: left;
 }
 
 
+.nombre-votos-contenedor{
+    display: flex;
+    height: 30%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .contenedor-partido{
     width: 100%;
+    height: 70%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 
     && h3{
         font-size:35px;
@@ -35,12 +63,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 3px solid rgba(128, 128, 128, 0.355);
+    border: 3px solid #EEEEEE;
     border-radius: 10px;
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100%;
     cursor: pointer;
-
+    border-radius: 20px;
+    background-color: white;
+    margin-right: 10px;
 }
 .imagen-partido{
     width: 50px;
@@ -51,11 +81,12 @@
     justify-content: center;
     align-items: center;
     background-color: white;
-    width: 75%;
-    height: 50px;
+    width: 85%;
+    height: 100%;
     position: relative;
-    border: 1px solid rgba(128, 128, 128, 0.555);
+    border: 1px solid #EEEEEE;;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .barraporcentual{
@@ -66,7 +97,7 @@
     position: absolute;
     left: 0;
     animation: aa 1s forwards;
-}                            
+}                       
 
 
 
@@ -86,7 +117,7 @@
 }
 
 .votosporpartido{
-    font-size: 15px;
+    font-size: 25px;
 
     && span {
         text-transform: capitalize;
