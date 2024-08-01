@@ -19,6 +19,14 @@
     padding: 0;
     margin: 0;
   }
+
+  .porcentajes-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   
   .contador-container {
     overflow: hidden;
@@ -40,3 +48,7 @@
     margin-top: 25px;
     text-align: center;
   }
+
+.ascenso{
+    flex-direction: column-reverse;
+}

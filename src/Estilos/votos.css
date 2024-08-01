@@ -5,6 +5,7 @@
     height: 180px;
     border: 1px solid grey;
     border-radius: 10px;
+    cursor: pointer;
 
     && IMG {
         width: 100%;

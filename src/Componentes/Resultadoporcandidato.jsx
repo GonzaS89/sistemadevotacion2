@@ -13,14 +13,6 @@ const Resultadoporcandidato = (props) => {
 
   let porcentaje;
 
-  const sumarYEnviar = () => {
-    return (
-      aumentarVotos(),
-      // validarId(),
-      // props.enviarVotos(votos),
-      props.enviarId(props.nombre)
-    );
-  };
 
   const definirCandidato = (candidato) => {
     return (
@@ -52,7 +44,7 @@ const Resultadoporcandidato = (props) => {
             props.votosMilei : props.votosMassa} {(props.votosMilei || props.votosMassa) > 1 || props.votosMilei || props.votosMassa === 0 ? 'votos' : 'voto'}</h3>
       </div>
       <div className="contenedor-partido">
-        <button className="contenedor-imagen" onClick={sumarYEnviar}>
+        <button className="contenedor-imagen" onClick={aumentarVotos}>
           <img className="imagen-partido " src={props.imagen} alt="" />
         </button>
         <div className="contenedor-barraporcentual">
