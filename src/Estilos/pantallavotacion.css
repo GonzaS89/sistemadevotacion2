@@ -1,0 +1,42 @@
+.boletas-container{
+    margin-top: 50px;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bloque-resultados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+  }
+  
+  h1,h2,h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contador-container {
+    overflow: hidden;
+    position: relative;
+    height: 2px; /* Asegúrate de que la altura sea suficiente para mostrar el efecto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .contador-caja{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    margin-top: 25px;
+    text-align: center;
+  }
