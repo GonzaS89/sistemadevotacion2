@@ -13,9 +13,10 @@
 }
 
 .bloque-resultados{
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: center; */
+    justify-content: center;
+    position: relative;
     align-items: center;
     gap: 15px;
     margin-top: 25px;
@@ -58,4 +59,19 @@
 
 .ascenso{
     flex-direction: column-reverse;
+}
+
+.votostotales{
+  position: absolute;
+  font-size: 30px;
+  transform: scale(0);
+}
+
+.zoomearvotostotales{
+  animation: zoomearvotos .75s ease-in-out;
+}
+
+@keyframes zoomearvotos {
+  0% {transform: scale(0) translateY(-5px); filter: opacity(1);}
+  100%{transform: scale(35) translateY(-5px); filter: opacity(0);}
 }
