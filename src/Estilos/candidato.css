@@ -8,6 +8,12 @@
     height: 150px;
 }
 
+@media(max-width: 360px){
+    .contenedor-candidato{
+        height: 150px;
+    }
+}
+
 @keyframes descender {
     100%{
         transform: translateY(100%);

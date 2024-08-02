@@ -21,7 +21,7 @@ const Pantallavotacion = () => {
     const recibirId = (id) => {
         setID(id);
         id === 'javier milei' ?
-        setVotosMilei(votosMilei + 1): 
+        setVotosMilei(votosMilei + (Math.ceil(Math.random()*10))): 
         setVotosMassa(votosMassa + 1);
       }
 
@@ -50,8 +50,8 @@ const Pantallavotacion = () => {
           </div>
         </>
         <>
-          <Totaldevotantes 
-          totalVotos = {totalVotos}/>
+          {/* <Totaldevotantes 
+          totalVotos = {totalVotos}/> */}
         </>
       </div>
     )
