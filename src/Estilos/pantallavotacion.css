@@ -2,7 +2,8 @@
     margin-top: 50px;
     width: 50%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 50px;
 }
 
 .bloque-resultados{

@@ -6,6 +6,7 @@
     border: 1px solid grey;
     border-radius: 10px;
     cursor: pointer;
+    gap: 20px;
 
     && IMG {
         width: 100%;

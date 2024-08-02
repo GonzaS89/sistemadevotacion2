@@ -48,7 +48,7 @@ const Resultadoporcandidato = (props) => {
           <img className="imagen-partido " src={props.imagen} alt="" />
         </button>
         <div className="contenedor-barraporcentual">
-          <h3>{porcentaje.toFixed(0)}%</h3>
+          <h3>{porcentaje.toFixed(1)}%</h3>
           <motion.div
             className={
               props.nombre === "javier milei"
